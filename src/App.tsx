@@ -1,13 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
+import { Counter } from "./features/counter/Counter";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h1 className="text-3xl bg-red-300 font-bold underline">
+          Hello world!
+        </h1>
         <Counter />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
