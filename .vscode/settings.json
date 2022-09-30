@@ -4,5 +4,12 @@
     "source.organizeImports": true
   },
   "typescript.tsdk": "node_modules/typescript/lib",
-  "cSpell.words": ["Productdetails", "Productpage"]
+  "cSpell.words": [
+    "apikey",
+    "gapi",
+    "Inited",
+    "Productdetails",
+    "Productpage",
+    "Signout"
+  ]
 }
