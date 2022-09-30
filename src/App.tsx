@@ -1,12 +1,11 @@
-import ConnectWallet from "./components/ConnectWallet";
-import SignInWithEthereum from "./components/SignInWithEthereum";
+import { BrowserRouter } from "react-router-dom";
+import Routes from "./routes";
 
 function App() {
   return (
-    <>
-      <ConnectWallet />
-      <SignInWithEthereum />
-    </>
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
   );
 }
 
