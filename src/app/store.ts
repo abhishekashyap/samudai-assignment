@@ -1,9 +1,11 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { Action, configureStore, ThunkAction } from "@reduxjs/toolkit";
+import signInReducer from "../components/SignInWithEthereum/signInSlice";
+import counterReducer from "../features/counter/counterSlice";
 
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
+    signIn: signInReducer,
   },
 });
 
