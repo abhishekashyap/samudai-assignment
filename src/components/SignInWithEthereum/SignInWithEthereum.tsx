@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { useAddSignInDataMutation } from "../../api/signInApiSlice";
 import { useEthers } from "../../context/EthereumSignInContext";
 import { createSiweMessage } from "../../utils";
 import Button from "../Button";
@@ -9,6 +10,7 @@ export const SignInWithEthereum = () => {
   const { provider } = useEthers();
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [signInMutation] = useAddSignInDataMutation();
 
   const signer = provider.getSigner();
 
@@ -22,7 +24,7 @@ export const SignInWithEthereum = () => {
       "await signer.signMessage(message): ",
       await signer.signMessage(message)
     );
-    // await postSignInData(signerAddress);
+    signInMutation(signerAddress);
     dispatch(setWalletAddress(signerAddress));
     dispatch(setIsAuthenticated(true));
     navigate("/dashboard");
