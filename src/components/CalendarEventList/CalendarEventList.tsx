@@ -14,7 +14,7 @@ export const CalendarEventList: FunctionComponent<CalendarEventListProps> = ({
       ) : (
         events.map((event) => (
           <div
-            key={event.summary}
+            key={`${event.summary}-${event.start.dateTime}`}
             className="p-5 bg-white rounded-lg flex items-center justify-between space-x-8 mb-5 shadow-xl hover:shadow-2xl hover:cursor-pointer hover:-translate-y-1 transition-all"
           >
             <div className="flex-1 flex justify-between items-center">
