@@ -1,1 +1,0 @@
-export { postSignInData } from "./postSignInData";
